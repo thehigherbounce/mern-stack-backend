@@ -12,7 +12,6 @@ mongoose.connect(config.DB, {
 }).then(() => { console.log('Database is connected') },
     err => { console.log('Can not connect to the database' + err) }
 );
-
 const app = express();
 app.use(passport.initialize());
 require('./passport')(passport);
